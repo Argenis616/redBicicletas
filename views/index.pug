@@ -1,5 +1,50 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  // Navigation
+  nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+    .container
+      a.navbar-brand(href='#') Red de Bicicletas
+      button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarResponsive.collapse.navbar-collapse
+        ul.navbar-nav.ml-auto
+          li.nav-item.active
+            a.nav-link(href='#')
+              | Home
+              span.sr-only (current)
+          li.nav-item
+            a.nav-link(href='#') About
+          li.nav-item
+            a.nav-link(href='#') Services
+          li.nav-item
+            a.nav-link(href='#') Contact
+  // Header - set the background image for the header in the line below
+  header.py-5.bg-image-full(style="background-image: url('https://unsplash.it/1900/1080?image=1076');")
+    img.img-fluid.d-block.mx-auto(src='http://placehold.it/200x200&text=Logo' alt='')
+  // Content section
+  section.py-5
+    .container
+      h1 Section Heading
+      p.lead Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.
+  // Image element - set the background image for the header in the line below
+  .py-5.bg-image-full(style="background-image: url('https://unsplash.it/1900/1080?image=1081');")
+    // Put anything you want here! There is just a spacer below for demo purposes!
+    div(style='height: 200px;')
+  // Content section
+  section.py-5
+    .container
+      //h1 Mapas de zona
+      #mapid
+  // Footer
+  footer.py-5.bg-dark
+    .container
+      p.m-0.text-center.text-white Copyright &copy; Your Website 2020
+    // /.container
+  // Bootstrap core JavaScript
+  script(src='/vendor/jquery/jquery.min.js')
+  script(src='/vendor/bootstrap/js/bootstrap.bundle.min.js')
+  script(src='/javascripts/map.js')
+
